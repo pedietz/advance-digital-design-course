@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.2 (64-bit)
+# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+# IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
+# SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
+# Start of session at: Mon Sep 29 01:59:35 2025
+# Process ID         : 33830
+# Current directory  : /home/pdietz/Desktop/FPGA/Laboratorio/Lab1/shiftleds/shiftleds.runs/ila_ila_0_0_synth_1
+# Command line       : vivado -log ila_ila_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_ila_0_0.tcl
+# Log file           : /home/pdietz/Desktop/FPGA/Laboratorio/Lab1/shiftleds/shiftleds.runs/ila_ila_0_0_synth_1/ila_ila_0_0.vds
+# Journal file       : /home/pdietz/Desktop/FPGA/Laboratorio/Lab1/shiftleds/shiftleds.runs/ila_ila_0_0_synth_1/vivado.jou
+# Running On         : pop-os
+# Platform           : Pop
+# Operating System   : Pop!_OS 22.04 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+# CPU Frequency      : 2500.010 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 16518 MB
+# Swap memory        : 20812 MB
+# Total Virtual      : 37330 MB
+# Available Virtual  : 28108 MB
+#-----------------------------------------------------------
+source ila_ila_0_0.tcl -notrace

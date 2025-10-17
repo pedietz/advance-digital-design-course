@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_shiftleds_behav/xsimk -simmode gui -wdb tb_shiftleds_behav.wdb -simrunnum 0 -socket 60293
+Design successfully loaded
+Design Loading Memory Usage: 190200 KB (Peak: 190320 KB)
+Design Loading CPU Usage: 1920 ms
+Simulation completed
+Simulation Memory Usage: 272196 KB (Peak: 329468 KB)
+Simulation CPU Usage: 2570 ms

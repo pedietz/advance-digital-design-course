@@ -1,0 +1,12 @@
+0.7
+2020.2
+Mar  6 2025
+19:11:57
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/ila/ip/ila_ila_0_0/sim/ila_ila_0_0.v,1759103853,verilog,,/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/ila/sim/ila.v,,ila_ila_0_0,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/ila/sim/ila.v,1759103853,verilog,,/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/vio/ip/vio_vio_0_0/sim/vio_vio_0_0.v,,ila,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/vio/ip/vio_vio_0_0/sim/vio_vio_0_0.v,1759103638,verilog,,/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/vio/sim/vio.v,,vio_vio_0_0,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.ip_user_files/bd/vio/sim/vio.v,1759103638,verilog,,/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/muxVioIla/shiftleds_muxVioIla.v,,vio,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.sim/sim_1/behav/xsim/glbl.v,1734094861,verilog,,,,glbl,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/muxVioIla/shiftleds_muxVioIla.v,1725097356,verilog,,,,shiftleds_muxVioIla,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/shiftleds.v,1725097356,verilog,,/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/tb_shiftleds.v,,shiftleds,,,,,,,,
+/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/tb_shiftleds.v,1759097709,verilog,,,,tb_shiftleds,,,,,,,,

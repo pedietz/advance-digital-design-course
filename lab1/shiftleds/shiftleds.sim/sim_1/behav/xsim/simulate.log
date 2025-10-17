@@ -1,0 +1,2 @@
+Time resolution is 1 ps
+$finish called at time : 5000225 ns : File "/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/tb_shiftleds.v" Line 61
