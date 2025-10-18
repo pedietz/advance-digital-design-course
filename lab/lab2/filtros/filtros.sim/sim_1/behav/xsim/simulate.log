@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+
+Simulation Started
+Simulation Finished
+
+$finish called at time : 81045 ns : File "/home/pdietz/Desktop/FPGA/repo/lab2/filtros/rtl/fir/tb_filtro_fir.v" Line 93

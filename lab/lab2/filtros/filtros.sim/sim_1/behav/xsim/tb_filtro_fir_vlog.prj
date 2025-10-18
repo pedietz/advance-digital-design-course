@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../rtl/iir2" \
+"../../../../rtl/fir/filtro_fir.v" \
+"../../../../rtl/fir/tb_filtro_fir.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
