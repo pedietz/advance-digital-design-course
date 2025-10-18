@@ -30,6 +30,12 @@
     <Object name="u_vio/vio_0_probe_out1" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="u_vio/vio_0_probe_out2[3:0]" gui_info="hw_vios/hw_vio_1=5_exp"/>
   </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="XADC" gui_info="hw_vios=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
+  <ObjectList object_type="hw_vio" gui_info="">
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	498	Name	0	2147483647	15	225	225	Value	1	2147483647	15	76	76	Activity	2	2147483647	15	57	57	Direction	3	2147483647	15	70	70	VIO	4	2147483647	15	70	70			1	6	1	Name	Value	Activity	Direction	VIO"/>
+  </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
@@ -146,7 +152,7 @@
         <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="3"/>
+        <Option Id="OUTPUT_VALUE" value="7"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>

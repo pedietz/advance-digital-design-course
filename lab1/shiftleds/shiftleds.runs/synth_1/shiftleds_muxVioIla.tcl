@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.runs/synth_1/shiftleds_muxVioIla.tcl"
+  variable script "/home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.runs/synth_1/shiftleds_muxVioIla.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,10 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-45600-pop-os/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -67,28 +65,28 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.cache/wt [current_project]
-set_property parent.project_path /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.xpr [current_project]
+set_property webtalk.parent_dir /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.cache/wt [current_project]
+set_property parent.project_path /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty:part0:1.1 [current_project]
-set_property ip_output_repo /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.cache/ip [current_project]
+set_property ip_output_repo /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/muxVioIla/shiftleds_muxVioIla.v
-add_files /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.srcs/sources_1/bd/ila/ila.bd
-set_property used_in_synthesis false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ila_ooc.xdc]
+read_verilog -library xil_defaultlib /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/src/muxVioIla/shiftleds_muxVioIla.v
+add_files /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.srcs/sources_1/bd/ila/ila.bd
+set_property used_in_synthesis false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ip/ila_ila_0_0/ila_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/ila/ila_ooc.xdc]
 
-add_files /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.srcs/sources_1/bd/vio/vio.bd
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/ip/vio_vio_0_0/vio_vio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/ip/vio_vio_0_0/vio_vio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/vio_ooc.xdc]
+add_files /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.srcs/sources_1/bd/vio/vio.bd
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/ip/vio_vio_0_0/vio_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/ip/vio_vio_0_0/vio_vio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.gen/sources_1/bd/vio/vio_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -99,14 +97,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/Arty_Master_v2.xdc
-set_property used_in_implementation false [get_files /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/src/shiftReg/Arty_Master_v2.xdc]
+read_xdc /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/src/shiftReg/Arty_Master_v2.xdc
+set_property used_in_implementation false [get_files /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/src/shiftReg/Arty_Master_v2.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.srcs/utils_1/imports/synth_1/shiftleds.dcp
+read_checkpoint -auto_incremental -incremental /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.srcs/utils_1/imports/synth_1/shiftleds.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

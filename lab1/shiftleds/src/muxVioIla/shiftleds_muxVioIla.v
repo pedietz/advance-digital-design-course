@@ -26,39 +26,37 @@ module shiftleds_muxVioIla
       parameter NB_SW     = `NB_SW     //! Number of bits of the switch (4)
    )
    (
-      // Ports
-    output [N_LEDS - 1 : 0] o_led , //! Leds
-    output [N_LEDS - 1 : 0] o_led_b , //! RGB Leds - Color Blue
-    output [N_LEDS - 1 : 0] o_led_g , //! RGB Leds - Color Green
-    input [NB_SW - 1 : 0]   i_sw , //! Switchs
-    input 		    i_reset , //! Reset **active low**
-    input 		    clock     //! System clock
+    // Ports
+      output [N_LEDS - 1 : 0] o_led  , //! Leds
+      output [N_LEDS - 1 : 0] o_led_b, //! RGB Leds - Color Blue
+      output [N_LEDS - 1 : 0] o_led_g, //! RGB Leds - Color Green
+      input  [NB_SW  - 1 : 0] i_sw   , //! Switchs
+      input                   i_reset, //! Reset **active low**
+      input                   clock    //! System clock
    );
    
    // Localparam
-   localparam R0       = (2**(NB_COUNT-10))-1  ; //! Limit of counter
-   localparam R1       = (2**(NB_COUNT-9)) -1  ; //! Limit of counter
-   localparam R2       = (2**(NB_COUNT-8)) -1  ; //! Limit of counter
-   localparam R3       = (2**(NB_COUNT-7)) -1  ; //! Limit of counter
+   localparam R0   = (2**(NB_COUNT-6)) - 1; //! Limit of counter
+   localparam R1   = (2**(NB_COUNT-5)) - 1; //! Limit of counter
+   localparam R2   = (2**(NB_COUNT-4)) - 1; //! Limit of counter
+   localparam R3   = (2**(NB_COUNT-3)) - 1; //! Limit of counter
 
-   localparam SEL0     = `NB_SEL'h0            ; //! Select R0
-   localparam SEL1     = `NB_SEL'h1            ; //! Select R1
-   localparam SEL2     = `NB_SEL'h2            ; //! Select R2
-   localparam SEL3     = `NB_SEL'h3            ; //! Select R3
+   localparam SEL0 = `NB_SEL'h0           ; //! Select R0
+   localparam SEL1 = `NB_SEL'h1           ; //! Select R1
+   localparam SEL2 = `NB_SEL'h2           ; //! Select R2
+   localparam SEL3 = `NB_SEL'h3           ; //! Select R3
 
    // Vars
-   wire [NB_COUNT - 1 : 0] ref_limit ; //! Limit value from constants
-   reg [NB_COUNT  - 1 : 0] counter   ; //! Counter
-   reg [N_LEDS    - 1 : 0] shiftreg  ; //! Shift Register
-   wire                    init      ; //! Internal Enable
-   wire                    reset     ; //! Internal Reset
-   wire [NB_SW - 1 : 0]    sw_w      ; //! Switch wire
+   wire [NB_COUNT - 1 : 0] ref_limit      ; //! Limit value from constants
+   reg  [NB_COUNT - 1 : 0] counter        ; //! Counter
+   reg  [N_LEDS   - 1 : 0] shiftreg       ; //! Shift Register
+   wire                    init           ; //! Internal Enable
+   wire                    reset          ; //! Internal Reset
+   wire [NB_SW - 1 : 0]    sw_w           ; //! Switch wire
 
-
-   wire [NB_SW - 1 : 0]   sw_from_VIO    ; //! Switchs
-   wire 		          reset_from_VIO ; //! Reset **active low**
-   wire                   selMux         ; //! Ctrl from    
-
+   wire [NB_SW - 1 : 0]    sw_from_VIO    ; //! Switchs
+   wire                    reset_from_VIO ; //! Reset **active low**
+   wire                    selMux         ; //! Ctrl from    
 
    // Reverse Reset
    assign sw_w      = (selMux) ? sw_from_VIO : i_sw;
@@ -77,7 +75,7 @@ module shiftleds_muxVioIla
          shiftreg <= {{N_LEDS-1{1'b0}},{1'b1}};
       end
       else if(init) begin
-         if(counter>=ref_limit)begin
+         if(counter >= ref_limit) begin
             counter  <= {NB_COUNT{1'b0}};
             shiftreg <= {shiftreg[N_LEDS-2 -: N_LEDS-1],shiftreg[N_LEDS-1]};
          end
@@ -94,29 +92,31 @@ module shiftleds_muxVioIla
 
    // Output to leds
    assign o_led   = shiftreg;
+   
    // Output to RGB leds
    assign o_led_b = (sw_w[3]==1'b0) ? shiftreg : {N_LEDS{1'b0}};
    assign o_led_g = (sw_w[3]==1'b1) ? shiftreg : {N_LEDS{1'b0}};
 
    //! VIO instance
    vio
-     u_vio
-       (
-        .clk_0       (clock),
-        .probe_in0_0 (o_led),
-        .probe_in1_0 (o_led_b),
-        .probe_in2_0 (o_led_g),
-        .probe_out0_0(selMux),
-        .probe_out1_0(reset_from_VIO),
-        .probe_out2_0(sw_from_VIO)
-        );
+      u_vio
+         (
+            .clk_0       (clock),
+            .probe_in0_0 (o_led),
+            .probe_in1_0 (o_led_b),
+            .probe_in2_0 (o_led_g),
+            .probe_out0_0(selMux),
+            .probe_out1_0(reset_from_VIO),
+            .probe_out2_0(sw_from_VIO)
+         );
 
    //! ILA Instance
    ila
-     u_ila
-       (
-        .clk_0    (clock),
-	     .probe0_0 (o_led)
-	    );
-   
+      u_ila
+         (
+            .clk_0    (clock),
+            .probe0_0 (o_led)
+         );
+
 endmodule // shiftleds
+

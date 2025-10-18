@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-| Date             : Fri Oct 17 01:47:39 2025
+| Date             : Sat Oct 18 01:06:59 2025
 | Host             : pop-os running 64-bit Pop!_OS 22.04 LTS
 | Command          : report_power -file shiftleds_muxVioIla_power_routed.rpt -pb shiftleds_muxVioIla_power_summary_routed.pb -rpx shiftleds_muxVioIla_power_routed.rpx
 | Design           : shiftleds_muxVioIla
@@ -53,7 +53,7 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.008 |        4 |       --- |             --- |
-| Slice Logic              |     0.001 |     3953 |       --- |             --- |
+| Slice Logic              |     0.001 |     3951 |       --- |             --- |
 |   LUT as Logic           |    <0.001 |     1193 |     20800 |            5.74 |
 |   Register               |    <0.001 |     2129 |     41600 |            5.12 |
 |   CARRY4                 |    <0.001 |       37 |      8150 |            0.45 |
@@ -61,7 +61,7 @@ Table of Contents
 |   LUT as Distributed RAM |    <0.001 |       24 |      9600 |            0.25 |
 |   F7/F8 Muxes            |    <0.001 |        6 |     32600 |            0.02 |
 |   Others                 |     0.000 |      221 |       --- |             --- |
-| Signals                  |     0.001 |     2914 |       --- |             --- |
+| Signals                  |     0.001 |     2913 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
 | I/O                      |     0.005 |       18 |       210 |            8.57 |
 | Static Power             |     0.062 |          |           |                 |
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.018 |       0.012 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.017 |       0.012 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |

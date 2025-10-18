@@ -3,22 +3,22 @@
 # SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
 # IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
 # SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
-# Start of session at: Fri Oct 17 01:38:12 2025
-# Process ID         : 48111
-# Current directory  : /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.runs/synth_1
+# Start of session at: Sat Oct 18 01:04:16 2025
+# Process ID         : 79513
+# Current directory  : /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.runs/synth_1
 # Command line       : vivado -log shiftleds_muxVioIla.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shiftleds_muxVioIla.tcl
-# Log file           : /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.runs/synth_1/shiftleds_muxVioIla.vds
-# Journal file       : /home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.runs/synth_1/vivado.jou
+# Log file           : /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.runs/synth_1/shiftleds_muxVioIla.vds
+# Journal file       : /home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.runs/synth_1/vivado.jou
 # Running On         : pop-os
 # Platform           : Pop
 # Operating System   : Pop!_OS 22.04 LTS
 # Processor Detail   : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
-# CPU Frequency      : 2499.997 MHz
+# CPU Frequency      : 2501.138 MHz
 # CPU Physical cores : 2
 # CPU Logical cores  : 4
 # Host memory        : 16516 MB
 # Swap memory        : 20810 MB
 # Total Virtual      : 37326 MB
-# Available Virtual  : 30291 MB
+# Available Virtual  : 31673 MB
 #-----------------------------------------------------------
 source shiftleds_muxVioIla.tcl -notrace

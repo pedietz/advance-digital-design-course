@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="/home/pdietz/Desktop/FPGA/repo/lab1/shiftleds/shiftleds.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="/home/pdietz/Repositories/advance-digital-design-course/lab1/shiftleds/shiftleds.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="67fdd6a4bf5649009cd96c7ae478f1c9"/>
